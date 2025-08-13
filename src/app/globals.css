@@ -15,8 +15,7 @@ body {
 }
 
 :root {
-  --brand: #9b87f5; /* soft purple */
-  --ink: #1f2937; /* gray-800 */
+  
 }
 
 /* Shared container only; header/footer styles live in their components */
