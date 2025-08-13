@@ -4,11 +4,11 @@ import "./globals.css";
 // import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Rania & Rafy – 01.08.2026",
-  description: "Wedding homepage with countdown and video.",
+  title: "Rafy & Rania – Wedding 2026",
+  description: "Save the date",
   openGraph: {
-    title: "Rania & Rafy – 1 August 2026",
-    description: "Wedding homepage with countdown and video.",
+    title: "Rafy & Rania – Wedding 2026",
+    description: "Save the date",
   },
 };
 
