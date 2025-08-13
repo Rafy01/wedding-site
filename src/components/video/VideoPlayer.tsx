@@ -1,14 +1,24 @@
 "use client";
 import styles from "./videoPlayer.module.css";
 
-type Props =
-  | { mode: "embed"; embedUrl: string }
-  | { mode: "file"; src: string; poster?: string };
+type FileProps = {
+  mode: "file";
+  src: string;
+  poster?: string;
+  /** How the video should fit inside its box. Default: "contain" */
+  fit?: "contain" | "cover";
+  /** Force a 16:9 frame (good for uniform cards). Default: false */
+  force16x9?: boolean;
+};
+
+type EmbedProps = { mode: "embed"; embedUrl: string };
+
+type Props = FileProps | EmbedProps;
 
 export default function VideoPlayer(props: Props) {
   if (props.mode === "embed") {
     return (
-      <div className={styles.videoWrap}>
+      <div className={`${styles.videoWrap} ${styles.ratio16x9}`}>
         <iframe
           src={props.embedUrl}
           title="Wedding video"
@@ -20,10 +30,27 @@ export default function VideoPlayer(props: Props) {
     );
   }
 
+  // FILE MODE (local video)
+  const { src, poster, fit = "contain", force16x9 = false } = props;
+  const wrapClass = force16x9
+    ? `${styles.videoWrap} ${styles.ratio16x9}`
+    : styles.videoWrap;
+
+  const videoClass = [
+    force16x9 ? styles.videoFill : styles.videoIntrinsic,
+    fit === "cover" ? styles.fitCover : styles.fitContain,
+  ].join(" ");
+
   return (
-    <div className={styles.videoWrap}>
-      <video controls preload="metadata" poster={props.poster} playsInline>
-        <source src={props.src} type="video/mp4" />
+    <div className={wrapClass}>
+      <video
+        className={videoClass}
+        controls
+        preload="metadata"
+        poster={poster}
+        playsInline
+      >
+        <source src={src} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
