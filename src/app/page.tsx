@@ -23,8 +23,11 @@ export default function Home() {
         </h2>
         <VideoPlayer
           mode="file"
-          src="/wedding2026-2.mp4" // file placed in /public
-          poster="/video_poster.webp" // optional image in /public
+          src="/Wedding2026_wide.mp4" // Desktop
+          srcMobile="/wedding2026-2.mp4" // Mobil
+          poster="/video_poster.webp" // Desktop poster
+          posterMobile="/poster-mobile.webp" // Mobil poster
+          fit="contain"
         />
       </Card>
     </main>

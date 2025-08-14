@@ -1,51 +1,39 @@
 .videoWrap {
   position: relative;
   width: 100%;
-  background: #000;
+  max-width: 900px; /* Desktop max bredde */
+  margin: 0 auto;
   border-radius: 16px;
   overflow: hidden;
+  background: black;
 }
 
-/* Use this to get a fixed 16:9 frame (only when force16x9 is true) */
-.ratio16x9 { aspect-ratio: 16 / 9; }
+.ratio16x9 {
+  aspect-ratio: 16/9;
+}
 
-/* Two ways to size the <video> */
-.videoIntrinsic { display: block; width: 100%; height: auto; }   /* keeps native aspect on mobile */
-.videoFill      { position: absolute; inset: 0; width: 100%; height: 100%; } /* fill the 16:9 frame */
+.videoIntrinsic {
+  width: 100%;
+  height: auto;
+}
 
-.fitContain { object-fit: contain; }
-.fitCover   { object-fit: cover; }
-
-/* Make iframe fill when using embed mode */
-.videoWrap iframe {
-  position: absolute;
-  inset: 0;
+.videoFill {
   width: 100%;
   height: 100%;
-  border: 0;
 }
 
-/* Small-screen polish */
-@media (max-width: 480px) {
-  .videoWrap { border-radius: 12px; }
-
-.videoWrap {
-  position: relative;
-  width: 100%;
-  max-width: 100%;      /* vigtigt på mobil */
-  aspect-ratio: 9 / 16;
-  background: #000;
-  border-radius: 16px;
-  overflow: hidden;
+.fitContain {
+  object-fit: contain;
 }
 
-/* Fylder wrapperen og kan krympe uden at skabe overflow */
-.videoWrap video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  object-fit: cover;    /* eller 'contain' hvis du vil undgå beskæring */
+.fitCover {
+  object-fit: cover;
 }
+
+/* Mobil tilpasning */
+@media (max-width: 768px) {
+  .videoWrap {
+    max-width: 100%;
+    border-radius: 0;
+  }
 }
