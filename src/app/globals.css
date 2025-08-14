@@ -8,7 +8,6 @@ body {
   height: 100%; /* fylder hele skærmen */
   margin: 0;
   padding: 0;
-  overflow: hidden; /* forhindrer scroll */
 }
 
 body {
