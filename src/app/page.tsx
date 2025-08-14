@@ -8,7 +8,7 @@ export default function Home() {
     <main className={styles.hero}>
       <Card ariaLabelledby="countdown-title">
         <h1 id="countdown-title" className={styles.title}>
-          We’re getting married! ❤️
+          We’re getting married!
         </h1>
         {/* <p>
           The big day is <strong>1 August 2026</strong> – we can’t wait to
