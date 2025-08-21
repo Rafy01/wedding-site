@@ -1,15 +1,32 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
-// import Header from "@/components/Header";
-// import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  // Sæt dit rigtige domæne her (uden trailing slash)
+  metadataBase: new URL("https://dit-domæne.dk"),
   title: "Rafy & Rania – Wedding 2026",
   description: "Save the date",
   openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Rafy & Rania – Wedding 2026",
     title: "Rafy & Rania – Wedding 2026",
     description: "Save the date",
+    images: [
+      {
+        url: "/og.jpeg", // bliver til https://dit-domæne.dk/og.jpg via metadataBase
+        width: 1200,
+        height: 630,
+        alt: "Rafy & Rania — 01.08.2026",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rafy & Rania – Wedding 2026",
+    description: "Save the date",
+    images: ["/og.jpg"],
   },
 };
 
