@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         url: "/og.jpeg", // bliver til https://dit-domæne.dk/og.jpg via metadataBase
         width: 1200,
         height: 630,
-        alt: "Rafy & Rania — 01.08.2026",
+        alt: "Rafy & Rania – Wedding 2026",
       },
     ],
   },
