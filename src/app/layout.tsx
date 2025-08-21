@@ -4,7 +4,7 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   // Sæt dit rigtige domæne her (uden trailing slash)
-  metadataBase: new URL("https://dit-domæne.dk"),
+  metadataBase: new URL("https://rafy-rania.dk/"),
   title: "Rafy & Rania – Wedding 2026",
   description: "Save the date",
   openGraph: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rafy & Rania – Wedding 2026",
     description: "Save the date",
-    images: ["/og.jpg"],
+    images: ["/og.jpeg"],
   },
 };
 
