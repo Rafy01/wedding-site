@@ -11,11 +11,12 @@ export default function ComingSoonOverlay() {
     const timer = setTimeout(() => setShow(true), 100);
     return () => clearTimeout(timer);
   }, []);
-  
+
   return (
     <div className={`${styles.overlay} ${show ? styles.show : ""}`}>
       <h1>Wedding date will be announced soon</h1>
       <p>Stay tuned – we can’t wait to celebrate with you 💍</p>
+      <p>Join our mailing list for updates & surprises ✨</p>
     </div>
   );
 }

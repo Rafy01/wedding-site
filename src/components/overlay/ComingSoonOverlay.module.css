@@ -29,3 +29,9 @@
   font-size: 1.2rem;
   opacity: 0.8;
 }
+
+@media (max-width: 768px) {
+  .overlay p{
+    font-size: 0.9rem;
+  }
+}
