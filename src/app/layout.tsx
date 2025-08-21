@@ -23,9 +23,11 @@ export default function RootLayout({
       <body>
         {/* Klaviyo popup script */}
         <Script
-          strategy="afterInteractive"
+          async
           src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=YqV4kW"
         />
+
+    
         <Script id="klaviyo-init" strategy="afterInteractive">
           {`!function(){if(!window.klaviyo){window._klOnsite=window._klOnsite||[];
             try{window.klaviyo=new Proxy({},{get:function(n,i){return"push"===i?
@@ -36,7 +38,6 @@ export default function RootLayout({
             t&&t(i),n(i)}]))}));return e}}})}
             catch(n){window.klaviyo=window.klaviyo||[],
             window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();`}
-          
         </Script>
         <div className="container">
           {/* <Header /> */}
