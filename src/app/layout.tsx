@@ -36,6 +36,7 @@ export default function RootLayout({
             t&&t(i),n(i)}]))}));return e}}})}
             catch(n){window.klaviyo=window.klaviyo||[],
             window.klaviyo.push=function(){var n;(n=window._klOnsite).push.apply(n,arguments)}}}}();`}
+          
         </Script>
         <div className="container">
           {/* <Header /> */}
