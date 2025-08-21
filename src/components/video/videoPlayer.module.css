@@ -36,4 +36,8 @@
     max-width: 100%;
     border-radius: 0;
   }
+  .videoIntrinsic {
+    width: 100%;
+    height: auto; /* Juster høyden for mobil */
+  }
 }
