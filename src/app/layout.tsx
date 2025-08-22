@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
+
 
 export const metadata: Metadata = {
   // Sæt dit rigtige domæne her (uden trailing slash)
@@ -83,6 +85,7 @@ export default function RootLayout({
           {children}
           {/* <Footer /> */}
         </div>
+        <Analytics />
       </body>
     </html>
   );
