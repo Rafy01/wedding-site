@@ -11,7 +11,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  opacity: 0; /* starter usynlig */
+  opacity: 1; /* starter usynlig */
   transition: opacity 0.5s ease-in-out; /* fade-in */
   z-index: 9999;
 }
@@ -31,7 +31,7 @@
 }
 
 @media (max-width: 768px) {
-  .overlay p{
+  .overlay p {
     font-size: 0.9rem;
   }
 }
