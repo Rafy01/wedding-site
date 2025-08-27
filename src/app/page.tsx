@@ -8,7 +8,7 @@ import ComingSoonOverlay from "../components/overlay/ComingSoonOverlay";
 export default function Home() {
   return (
     <>
-      <ComingSoonOverlay />
+      {/* <ComingSoonOverlay /> */}
       <main className={styles.hero}>
         <Card ariaLabelledby="countdown-title">
           <h1 id="countdown-title" className={styles.title}>
