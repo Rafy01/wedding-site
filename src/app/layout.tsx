@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description: "Save the date",
     images: [
       {
-        url: "/og.jpeg", // bliver til https://dit-domæne.dk/og.jpg via metadataBase
+        url: "/og.png", // bliver til https://dit-domæne.dk/og.jpg via metadataBase
         width: 1200,
         height: 630,
         alt: "Rafy & Rania – Wedding 2026",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rafy & Rania – Wedding 2026",
     description: "Save the date",
-    images: ["/og.jpeg"],
+    images: ["/og.png"],
   },
 };
 
