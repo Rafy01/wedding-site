@@ -2,13 +2,13 @@ import styles from "./page.module.css";
 import Card from "../components/cards/Cards";
 import Countdown from "../components/contdown/Countdown";
 import VideoPlayer from "@/components/video/VideoPlayer";
-import ComingSoonOverlay from "../components/overlay/ComingSoonOverlay";
+// import ComingSoonOverlay from "../components/overlay/ComingSoonOverlay";
 
 
 export default function Home() {
   return (
     <>
-      <ComingSoonOverlay />
+      {/* <ComingSoonOverlay /> */}
       <main className={styles.hero}>
         <Card ariaLabelledby="countdown-title">
           <h1 id="countdown-title" className={styles.title}>
